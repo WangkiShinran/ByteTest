@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <Button
+            android:id="@+id/get_internal_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Internal目录"/>
+        <TextView
+            android:id="@+id/internal_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点解按钮获取目录"
+            app:layout_constraintTop_toTopOf="@+id/get_internal_path"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <Button
+            android:id="@+id/get_external_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/get_internal_path"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="External目录"/>
+
+        <TextView
+            android:id="@+id/external_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点解按钮获取目录"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/get_external_path"
+            app:layout_constraintBottom_toBottomOf="@id/get_external_path"/>
+        <Button
+            android:id="@+id/save_key_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/get_external_path"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="点击保存键值对"/>
+        <EditText
+            android:id="@+id/save_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/save_key_value"
+            app:layout_constraintBottom_toBottomOf="@+id/save_key_value"
+            app:layout_constraintTop_toTopOf="@+id/save_key_value"
+            android:hint="key"
+            android:layout_marginLeft="80dp"/>
+        <EditText
+            android:id="@+id/save_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/save_key"
+            app:layout_constraintTop_toTopOf="@+id/save_key"
+            android:hint="value"/>
+        <Button
+            android:id="@+id/get_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/save_key_value"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="点击获取value值"/>
+
+        <EditText
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_value"
+            android:hint="key"/>
+
+        <Button
+            android:id="@+id/save_database"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/get_value"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="点击保存数据"/>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/key"
+            android:hint="content"/>
+
+        <TextView
+            android:id="@+id/internal_path_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@+id/save_database"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/external_path_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@+id/internal_path_show"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
